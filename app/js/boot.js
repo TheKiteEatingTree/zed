@@ -31,7 +31,7 @@ require(["text!../manual/intro.md"], function(introText) {
         "./preview",
         "./dnd",
         "./handlers",
-        "./fix",
+        "./action",
         "./theme",
         "./log"];
     require(modules, function() {
@@ -48,8 +48,8 @@ require(["text!../manual/intro.md"], function(introText) {
         _.each(arguments, function(module) {
             if (module.init) module.init();
         });
-
-        console.log("Zed booted.");
+        
+                console.log("Zed booted.");
 
         function setupBuiltinDoc(path, text) {
             var session_manager = require("./session_manager");
