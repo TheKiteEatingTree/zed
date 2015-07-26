@@ -7,7 +7,7 @@ function openEditor(title, url, urlPostfix) {
     urlPostfix = urlPostfix || "";
     return new Promise(function(resolve, reject) {
         chrome.app.window.create('editor.html?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title) + urlPostfix, {
-            frame: isLinux ? 'chrome' : 'none',
+            frame: 'none',
             width: 1024,
             height: 768
         }, function(win) {

@@ -25,8 +25,7 @@ define(function(require, exports, module) {
                 closeHandler = handler;
             },
             useNativeFrame: function() {
-                return userAgent.isLinux;
-                // return false;
+                return false;
             },
             fullScreen: function() {
                 if (win.isFullscreen()) {
